@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web page</title>
+    <link rel="stylesheet" href="Css-Files/Exp5.css">
+  </head>
+  <body>
+    <div class="details-div">
+      <p class="details-text">Your Details: </p>
+      <div class="input-div">
+        <label>Name: </label>
+        <input type="text" name="user-name">
+      </div>
+      <div>
+        <label>Email: </label>
+        <input type="email" name="email">
+      </div>
+    </div>
+
+    <div class="review-div">
+      <p class="review-text">Your Review: </p>
+      <p class="info">How did you hear about us?</p>
+      <select name="review">
+        <option value="Google">Google</option>
+        <option value="New">News</option>
+      </select>
+      <p>Would you visit again?</p>
+      <input type="radio" name="yes/no" value="yes">Yes
+      <input type="radio" name="yes/no" value="no">No
+      <input type="radio" name="yes/no" value="may be">May be
+
+      <div class="comments">
+        <p>Comments</p>
+        <textarea name="comments" cols="60" rows="5"></textarea>
+      </div>
+
+      <div class="signup">
+        <input type="checkbox"> Sign me up for email updates
+      </div>
+      <button>Submit review</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+p{
+  margin: 5px;
+}
+.details-div{
+  margin: auto;
+  margin-top: 20px;
+  width: 500px;
+  border: 1px grey solid;
+  padding: 0px 40px 20px 10px;
+  font-family: Times New Roman,Arial;    
+  position: relative;
+}
+.details-text{
+  position: absolute;
+  top: -19px;
+  padding: 3px;
+  background-color: white;
+}
+.input-div{
+  margin-top: 20px;
+}
+.review-div{
+  position: relative;
+  margin: auto;
+  margin-top: 40px;
+  width: 500px;
+  border: 1px grey solid;
+  padding: 0px 40px 20px 10px;
+}
+.review-text{
+  position: absolute;
+  top: -18px;
+  background-color: white;
+  padding: 3px;
+}
+.info{
+  display: inline-block;
+  margin-top: 30px;
+}
+.signup{
+  margin-top: 5px;
+}
+textarea{
+  display: block;
+}
+.comments{
+  margin-top: 20px;
+}
