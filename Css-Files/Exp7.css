@@ -7,7 +7,7 @@ body{
 }
 
 .row-2{
-  grid-gap: 30px;
+  grid-gap: 40px;
 }
 .green-text{
   background-color: green;
@@ -16,4 +16,11 @@ body{
 }
 .row2-yellow{
   background-color: #ffff80;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.number{
+  background-color: white;
+  margin: 10px;
 }
