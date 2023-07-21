@@ -1,0 +1,43 @@
+.container{
+  border: 1px black solid;
+  display: grid;
+  width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  grid-template-columns: 270px 500px;
+  background-color: rgba(0, 119, 255, 0.541);
+  grid-gap: 20px;
+  padding: 20px 0px 10px 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+.image{
+  width: 270px;
+}
+body{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+
+.container-2{
+  border: 1px black solid;
+  margin: auto;
+  margin-top: 100px;
+  width: 825px;
+  height: 500px;
+  box-shadow: 5px 5px 5px grey;
+}
+.row-1{
+  border: 5px rgb(228, 6, 253) solid;
+  height: 200px;
+  width: 280px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.row-2{
+  border: 5px rgb(228, 6, 253) solid;
+  height: 200px;
+  width: 280px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
