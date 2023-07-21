@@ -15,7 +15,6 @@
 }
 body{
   font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
 }
 
 
@@ -24,7 +23,7 @@ body{
   margin: auto;
   margin-top: 100px;
   width: 825px;
-  height: 500px;
+  height: 600px;
   box-shadow: 5px 5px 5px grey;
 }
 .row-1{
@@ -33,6 +32,7 @@ body{
   width: 280px;
   margin-top: 10px;
   margin-left: 20px;
+  padding: 10px;
 }
 .row-2{
   border: 5px rgb(228, 6, 253) solid;
@@ -40,4 +40,14 @@ body{
   width: 280px;
   margin-top: 10px;
   margin-left: 20px;
+  padding: 5px 20px 5px 40px;
+}
+.heading-content{
+  font-size: 16px;
+}
+.row-1-text{
+  font-size: 20px;
+}
+.row-2-text{
+  font-size: 20px;
 }
