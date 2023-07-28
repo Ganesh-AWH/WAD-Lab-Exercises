@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <style>
+    input{
+      border: none;
+    }
+
+  </style>
+  <body>
+    <table border="1px">
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="name"></td>
+      </tr>
+      <tr>
+        <td>Sex</td>
+        <td>
+          <input type="radio" name="sex" value="Male">Male
+          <input type="radio" name="sex" value="Female">Female
+        </td>
+      </tr>
+      <tr>
+        <td>Eye color</td>
+        <td>
+          <select name="eye-color">
+            <option value="green">green</option>
+            <option value="green">black</option>
+            <option value="green">blue</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Check all that apply</td>
+        <td>
+          <div>
+            <input type="checkbox" name="check" class="check">Over 6 feet tall
+          </div>
+          <div>
+            <input type="checkbox" name="check">Over 2000 pounds
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
