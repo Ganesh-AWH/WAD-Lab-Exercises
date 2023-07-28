@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smaplt HTML Data Form</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      div{
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>A Sample HTML Data Entry Form</h3>
+    <div class="row">
+      <label for="name">Enter your name:</label>
+      <input type="text" name="name">
+    </div>
+
+    <div>
+      <label for="password">Enter Your password:</label>
+      <input type="password" name="password">
+    </div>
+
+    <div>
+      <label for="year">Which year?</label>
+      <input type="radio" name="year" value="1">yr 1
+      <input type="radio" name="year" value="2">yr 2
+      <input type="radio" name="year" value="3">yr 3
+    </div>
+
+    <div>
+      <label for="subject">Subject Registered:</label>
+      <input type="checkbox" name="subject" value="E101">E101
+      <input type="checkbox" name="subject" value="E102">E102
+      <input type="checkbox" name="subject" value="E103">E103
+    </div>
+
+    <div>
+      <label for="day">Select Day:</label>
+      <select name="day">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednessday">Wednessday</option>
+      </select>
+    </div>
+
+    <div>
+      <textarea name="request" cols="30" rows="6">Enter your special request here
+      </textarea>
+    </div>
+    <div>
+      <button>SEND</button>
+      <button>CLEAR</button>
+    </div>
+  </body>
+</html>
