@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Request for White Paper</title>
+    <style>
+      .star{
+        color: red;
+      }
+      p{
+        font-size: 20px;
+      }
+      .element{
+        margin-bottom: 15px;
+      }
+      label{
+        width: 5px;
+        margin-right: 15px;
+      }
+      body{
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h2>Request for White Paper</h2></center>
+    <p>Please fill out the from below.If you have any question,please e-mail <a href="#">whitepaper@ektron.com</a></p>
+    <p><span class="star">*</span> - required fields</p>
+    <hr style="background-color:rgb(0, 115, 255)">
+
+    <form>
+      <div class="element">
+        <label><span class="star">*</span>First Name: </label>
+        <input type="text" class="fname">
+      </div>
+      <div class="element">
+        <label><span class="star">*</span>Last Name: </label>
+        <input type="text" class="lname">
+      </div>
+      <div class="element">
+        <label>Company Name: </label>
+        <input type="text">
+      </div>
+      <div class="element">
+        <label>Company/Personal Website: </label>
+        <input type="text">
+      </div>
+      <div class="element">
+        <label><span class="star">*</span>Email: </label>
+        <input type="" class="email">
+      </div>
+      <div class="element">
+        <label>Phone: </label>
+        <input type="number">
+        <label>Ext:</label>
+        <input type="number">
+      </div>
+
+      <div class="element">
+        <label>State/Province: </label>
+        <select name="state" id="state">
+          <option value="USA">USA</option>
+          <option value="CANADA">CANADA</option>
+        </select>
+      </div>
+
+      <div class="element">
+        <label><span class="star">*</span>Country: </label>
+        <select name="country" id="cont">
+          <option value="US">United States</option>
+          <option value="IN">India</option>
+          <option value="NP">Nepal</option>
+        </select>
+      </div>
+      <div class="element">
+        <label>Comments</label>
+        <textarea name="review" id="text-area" cols="200" rows="3"></textarea>
+      </div>
+      <center>
+        <button onclick="validate()">Request White Paper</button>
+      </center>
+    </form>
+
+    <script>
+      function isValidEmail(email){
+        var count=email.length;
+        var atpos=email.indexOf('@');
+        var atdot=email.lastIndexOf('.');
+        var tld=email.substring(atdot);
+        if(atpos<1 || atdot<1)
+        {
+            return false;
+          }
+            else if(atpos>atdot)
+          {
+            return false;
+          }
+        else{
+        return true;
+        }
+      }
+      function validate(){
+        const fname = document.querySelector(".fname");
+        const lname = document.querySelector(".lname");
+        const email = document.querySelector(".email");
+        if(fname.value == "" || lname.value == ""){
+          alert("All * fields are mandotary");
+        }
+        const special_characters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        if(special_characters.test(fname.value) || special_characters.test(lname.value)){
+          alert("Don't enter any special character in First name and Last name");
+        }
+        if(!isValidEmail(email.value)){
+          alert("Email is not valid");
+        }
+      }
+
+    </script>
+  </body>
+</html>
