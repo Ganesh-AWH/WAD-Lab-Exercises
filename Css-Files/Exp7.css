@@ -23,9 +23,12 @@ body{
 .number{
   background-color: white;
   margin: 10px;
+<<<<<<< HEAD
 }
 .yellow-text{
   background-color: rgb(255, 235, 9);
   width: 60px;
   margin: 20px;
+=======
+>>>>>>> 8d2b2f56f358aa105dce1f0c3f62c1bc5b5963a3
 }
