@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smaplt HTML Data Form</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      div{
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>A Sample HTML Data Entry Form</h3>
+    <form action="">
+      <div class="row">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="js-input-name" id="sname">
+      </div>
+  
+      <div>
+        <label for="password">Enter Your password:</label>
+        <input type="password" name="password" id="js-input-password">
+      </div>
+  
+      <div>
+        <label for="year">Which year?</label>
+        <input type="radio" name="year" value="1" id="yr-1">yr 1
+        <input type="radio" name="year" value="2" id="yr-2">yr 2
+        <input type="radio" name="year" value="3" id="yr-3">yr 3
+      </div>
+  
+      <div>
+        <label for="subject">Subject Registered:</label>
+        <input type="checkbox" name="subject" value="E101" id="subject-1">E101
+        <input type="checkbox" name="subject" value="E102" id="subject-2">E102
+        <input type="checkbox" name="subject" value="E103" id="subject-3">E103
+      </div>
+  
+      <div>
+        <label for="day">Select Day:</label>
+        <select name="day">
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednessday">Wednesday</option>
+        </select>
+      </div>
+  
+      <div>
+        <textarea name="request" cols="30" rows="6" placeholder="">Enter your special request here
+        </textarea>
+      </div>
+      <div>
+        <!-- <input type="submit" value="SEND" onclick="validate()"> -->
+        <button onclick="validate()" type="submit">SEND</button>
+        <input type="reset" value="CLEAR">
+      </div>
+      <p class="output"></p>
+    </form>
+  
+    <script>
+      var yr2 = document.getElementById("yr-2");
+      yr2.checked = true ;
+      function validate(){
+        var username = document.getElementById("js-input-name");
+        var password = document.getElementById("js-input-password");
+        var yr1 = document.getElementById("yr-1");
+        var yr3 = document.getElementById("yr-3");
+        const subject1 = document.getElementById("subject-1"); 
+        const subject2 = document.getElementById("subject-2"); 
+        const subject3 = document.getElementById("subject-3"); 
+        const day = document.getElementById("day");
+        if(username.value == "" || password.value == "" || (!subject1.checked && !subject2.checked && !subject3.checked) ){
+          alert("All of the fields are required");
+        }
+        const special_characters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        if(special_characters.test(username.value)){
+          alert("Don't enter any special character");
+        }
+        if(password.value.length <4 || password.value.length>8){
+          alert("password length in range of 5-8");
+        }
+        //year validation
+        if(yr1.checked || yr3.checked){
+          alert("1st year or 3rd year is not eligible");
+        }
+      }
+    </script>
+  </body>
+</html>

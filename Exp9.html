@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <style>
+    input{
+      border: none;
+    }
+    p{
+      margin: 0;
+    }
+    table{
+      margin: auto;
+      margin-top: 100px;
+      border-spacing: 3px;
+    }
+    td{
+      padding: 2px 10px 2px 10px;
+    }
+    .enter-button{
+      margin-left: 100px;
+    }
+    #input-name{
+      border: none;
+      width: 200px;
+    }
+  </style>
+  <body>
+    <table border="1px">
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="name" id="input-name"></td>
+      </tr>
+      <tr>
+        <td>Sex</td>
+        <td>
+          <input type="radio" name="sex" value="Male" id="male">Male
+          <input type="radio" name="sex" value="Female" id="female">Female
+        </td>
+      </tr>
+      <tr>
+        <td>Eye color</td>
+        <td>
+          <select name="eye-color" id="js-eye">
+            <option value="green" id="eye-green">green</option>
+            <option value="black" id="eye-black">black</option>
+            <option value="blue" id="eye-blue">blue</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Check all that apply</td>
+        <td>
+          <div>
+            <input type="checkbox" name="check" class="check" id="height">Over 6 feet tall
+          </div>
+          <div>
+            <input type="checkbox" name="check" id="weight">Over 2000 pounds
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>Describe your athletic ability:</p>
+          <textarea name="ability" id="msg" cols="50" rows="5"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit" class="enter-button" onclick="validate()">Enter my information</button>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      function validate(){
+        const usrname = document.getElementById("input-name");
+        const male = document.getElementById("male");
+        const female = document.getElementById("female");
+        const height = document.getElementById("height");
+        const weight = document.getElementById("weight");
+        //all the fields are required condition
+        if(usrname.value == "" || (!male.checked && !female.checked) || (!height.checked && !weight.checked)){
+          alert("All the fields are required");
+        }
+
+        //eye colour validation
+        const eye_black = document.getElementById("js-eye");
+        const color = eye_black.value;
+        if(color != "black"){
+          alert("eye color should be always black");
+        }
+      }
+    </script>
+  </body>
+</html>
